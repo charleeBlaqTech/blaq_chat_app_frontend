@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
+
+.App{
+    width: 40%;
+    height:640px;
+    margin: 70px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #4b92ff;
+    background-color: #98b0d4;
+    border-radius: 20px;
+}
+.heading{
+    background-color: #B7E3FF;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+    width: 90%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-chat{
+    flex-basis: 10%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top-chat input{
+    height: 46px;
+    margin-bottom: 10px;
+    width: 280px;
+    text-align: center;
+    font-size: 22px;
+    text-transform: capitalize;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.top-chat button{
+    width: 220px;
+    height: 43px;
+    margin-top: 20px;
+    background-color: #4b92ff;
+    border-radius: 13px;
+    border: 1px solid transparent;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.chat-screen{
+    flex-basis: 90%;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    scroll-behavior: smooth;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.chat-screen .text-body{
+    flex-basis: 90%;
+    width: 100%;
+    padding: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    
+}
+ .send{
+
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.send input{
+    flex-basis: 70%;
+    height: 46px;
+    text-align: center;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+ .send button{
+    flex-basis: 20%;
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+    background-color: #4b92ff;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.sender{
+    align-self: flex-end;
+    padding: 12px;
+    background-color: #142D55;
+}
+.receiver{
+    align-self: flex-start;
+    padding: 12px;
+    background-color: #B7E3FF;
+}
+.senderTime{
+    align-self: flex-end;
+    padding: 12px;
+    margin: 0 14px;
+    line-height: 0;
+   
+}
+.receiverTime{
+    align-self: flex-start;
+    padding: 12px;
+    margin: 0 14px;
+    line-height: 0;
+}
+
+p{
+    padding: 0;
+    margin: 0 14px;
+    border-radius: 13px;
+    text-align: center;
+    width: 70px;
+    color: #fff;
+    font-size: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+p span{
+    margin-bottom: 3px;
+}
+
+p .user-name{
+    flex-basis: 10%;
+    color: orangered;
+}
+p .user-text{
+    flex-basis: 86%;
+}
+
+.scroll-effect{
+    width: 100%;
+    /* height: 168px; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.error-meaasage{
+    width: 80%;
+    font-size: 18px;
+    font-weight: 300;
+    color: red;
+    margin-bottom: 18px;
+}
+
+
+
+
+@media screen and (max-width: 600px){
+    .App{
+        width: 100%;
+        height:100%;
+        margin:0;
+       
+    }
+
+    .heading{
+        width: 80%;
+        text-align: center;
+    }
+    
+    .top-chat{
+        flex-basis: 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .top-chat input{
+        height: 46px;
+        margin-bottom: 10px;
+        width: 280px;
+        text-align: center;
+        font-size: 22px;
+        text-transform: capitalize;
+        border-radius: 10px;
+    }
 }
